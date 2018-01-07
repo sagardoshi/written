@@ -781,7 +781,7 @@
   \begin{lstlisting}
   sum2(L, S) :- sum_acc(L, 0, S).
   sum_acc([], S, S).
-  sum_acc([E|T, CurrentSum, Sum) :-
+  sum_acc([E|T], CurrentSum, Sum) :-
     NewSum is CurrentSum + E,
     sum_acc(T, NewSum, Sum).
   \end{lstlisting} 
